@@ -1,0 +1,99 @@
+.congratulation {
+    height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  header {
+    padding: 20px 10px;
+    background-color: #650962;
+    color: white;
+    box-shadow: 0 5px 5px #b6b6b6;
+  }
+  main {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+    flex: 1;
+    .select {
+      float: left;
+      width: 30%;
+    }
+    .bc_image {
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+      position: relative;
+      .bc_image_header {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .image {
+        img {
+          width: 100%;
+        }
+        .stuList {
+          position: absolute;
+        //   top: 0;
+          text-align: center;
+          color: gold;
+          left: 50%;
+          transform: translateX(-50%);
+          .table_header {
+            text-align: center;
+            font-weight: bold;
+          }
+          table {
+            margin: 0 auto;
+            font-size: 12px;
+            width: 100%;
+            tr {
+              th,
+              td {
+                padding: 5px 5px;
+              }
+            }
+          }
+          table,
+          tr,
+          td,
+          th {
+            border: 1px solid gold;
+            border-collapse: collapse;
+          }
+        }
+      }
+    }
+    .change_img {
+      float: right;
+      width: 30%;
+      .change_img_header {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .input_img {
+        > div:not(last-child) {
+          display: flex;
+          .label {
+            line-height: 64px;
+          }
+          .input_content {
+            flex: 1;
+          }
+        }
+        .v-btn{
+            margin: 0 auto;
+        }
+        input[type=file]{
+          display: none;
+        }
+      }
+    }
+  }
+  main::after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}

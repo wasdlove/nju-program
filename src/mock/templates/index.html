@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        color: gold;
+        width: 525px;
+        margin: 0 auto;
+        top: 400px;
+        text-align: center;
+        position: relative;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid gold;
+      }
+      td,
+      th {
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 680px;">
+      <img
+        src="C:/Users/ASUS/Desktop/luquxibao.jpg"
+        alt=""
+        style="position: absolute;width: 680px;"
+      />
+      <div>
+        <h4
+          style="color: gold;position: relative;text-align: center;top: 400px;font-size: 25px;"
+        >
+          {{ schoolName }}
+        </h4>
+        <table>
+          <tr>
+            {% for thead in theads %}
+            <th>{{ thead }}</th>
+            {% endfor %}
+          </tr>
+          {% for student in students %}
+          <tr>
+            {% for stuInfo in student %}
+            <td>{{stuInfo}}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
